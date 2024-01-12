@@ -20,7 +20,7 @@ def count_lines_in_directory(directory):
 
     for root, _, files in os.walk(directory):
         for file in files:
-            if file.endswith(".py"):
+            if file.endswith(".py") or file.endswith(".html") or file.endswith(".js") or file.endswith(".py"):
                 file_path = os.path.join(root, file)
                 lines = count_lines_in_file(file_path)
                 total_lines += lines
